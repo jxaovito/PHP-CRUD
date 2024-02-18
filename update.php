@@ -9,7 +9,7 @@
 		<a href="index.php">Início</a>
 	</p>
 
-	<form action="updateProducts.php" method="post" name="add">
+	<form action="updateProducts.php?id_produto=<?php echo $_GET['id_produto']; ?>" method="post" name="edit">
 		<table width="25%">
 			<tr> 
 				<td>Nome</td>
@@ -29,7 +29,7 @@
 			</tr>
 			<tr> 
 				<td></td>
-				<td><input type="submit" name="submit" value="Add"></td>
+				<td><input type="submit" name="submit" value="Editar"></td>
 			</tr>
 		</table>
 	</form>

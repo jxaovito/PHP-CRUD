@@ -17,11 +17,13 @@ if (isset($_POST['submit'])) {
 	$preco = $_POST['preco'];
     $quantidade = $_POST['quantidade'];
 
-		// Insert data into database
-		$result = $pdo->query("UPDATE produtos SET nome_produto = '$nome', descricao_produto = '$descricao', preco_produto = '$preco', quantidade_produto = '$quantidade' WHERE id_produto = '$id'");
-		
+		// Updata data in database
+           $result = $pdo->query("UPDATE produtos SET nome_produto = '$nome', descricao_produto = '$descricao', preco_produto = '$preco', quantidade_produto = '$quantidade' WHERE id_produto = '$id'");
+    
+	
 		// Display success message
 		echo "<p><font color='green'>Produto editado com sucesso!</p>";
+        echo $nome.",". $descricao.",". $preco;
 		echo "<a href='index.php'>Ver produtos</a>";
 	
 }
