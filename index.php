@@ -23,7 +23,6 @@
 			<td><strong>Descrição</strong></td>
 			<td><strong>Preço</strong></td>
             <td><strong>Quantidade</strong></td>
-
 		</tr> 
 		<?php
 		// Fetch the next row of a result set as an associative array
@@ -36,9 +35,9 @@
             echo '<td>'. $row['preco_produto'] . '</td>';
             echo '<td>'. $row['quantidade_produto'] . '</td>';
             echo '<td width=250>';
-            echo '<a class="btn btn-warning" href="update.php?id='.$row['id_produto'].'">Atualizar</a>';
+            echo '<a class="btn btn-warning" href="update.php?id_produto='.$row['id_produto'].'">Atualizar</a>';
             echo ' ';
-            echo '<a class="btn btn-danger" href="delete.php?id='.$row['id_produto'].'">Excluir</a>';
+            echo '<a class="btn btn-danger" href="delete.php?id_produto='.$row['id_produto'].'">Excluir</a>';
             echo '</td>';
             echo '</tr>';
         }
